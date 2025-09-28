@@ -1,23 +1,12 @@
 # Cmake tutorials
 
-This tutorial walks you through setting up cmake and using it to create a C/C++ 1 file project from scratch, then moving function into different libarries and header files.
-
-Kubernetes The Hard Way is optimized for learning, which means taking the long route to ensure you understand each task required to bootstrap a Kubernetes cluster.
-
-This tutorial is a modified version of the original developed by [Kelsey Hightower](https://github.com/kelseyhightower/kubernetes-the-hard-way).
-While the original one uses GCP as the platform to deploy kubernetes,  we use VirtualBox and Vagrant to deploy a cluster on a local machine. If you prefer the cloud version, refer to the original one [here](https://github.com/kelseyhightower/kubernetes-the-hard-way)
-
-Another difference is that we use Docker instead of containerd. There are a few other differences to the original and they are documented [here](docs/differences-to-original.md)
-
-> The results of this tutorial should not be viewed as production ready, and may receive limited support from the community, but don't let that stop you from learning!
+This tutorial walks you through setting up cmake and using it to create a C/C++ 1 file project from scratch, then moving function into different libarires and header files.
 
 ## Target Audience
 
-The target audience for this tutorial is someone planning to support a production Kubernetes cluster and wants to understand how everything fits together.
+Everyone wants to learn about cmake
 
-## Cluster Details
-
-Kubernetes The Hard Way guides you through bootstrapping a highly available Kubernetes cluster with end-to-end encryption between components and RBAC authentication.
+## Requirements
 
 * [Kubernetes](https://github.com/kubernetes/kubernetes) 1.13.0
 * [Docker Container Runtime](https://github.com/containerd/containerd) 18.06
