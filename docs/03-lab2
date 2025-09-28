@@ -1,0 +1,73 @@
+In this lab we will create a library call it `displayer` and move the `printf` out to the library to demonstrate libraries inclusion operations
+
+[ansible@ansible cmake_tutorial]$ `ls -l`
+`build  CMakeLists.txt  main.c`
+
+Create the libraray source and header directories
+
+[ansible@ansible cmake_tutorial]$ `mkdir -p lib/libdisplayer/{include,src}`
+
+Create the header file with the header guard
+
+[ansible@ansible cmake_tutorial]$ `vim lib/libdisplayer/include/display.h`
+```
+#ifndef DISPLAYER_H
+#define DISPLAYER_H
+
+void display(char *c);
+
+#endif
+```
+
+Create the library source code
+
+[ansible@ansible cmake_tutorial]$ `vim lib/libdisplayer/src/display.c`
+```
+#include <stdio.h>
+
+void display(char *c)
+{
+        printf("%s", c);
+}
+```
+
+Create the libraries `CMakeLists.txt` configuration, pointing to the library and the header files(there are more details in the options that chosen with, such as having the library as static or shared, and the scope which could be public or private)
+
+[ansible@ansible cmake_tutorial]$ `vim lib/CMakeLists.txt`
+
+```
+add_library(displayer STATIC ${CMAKE_CURRENT_SOURCE_DIR}/libdisplayer/src/display.c)
+
+target_include_directories(displayer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/libdisplayer/include)
+```
+
+Update the main `CMakeLists.txt` to point to the new added library and link header
+
+[ansible@ansible cmake_tutorial]$ `vim CMakeLists.txt`
+```
+cmake_minimum_required(VERSION 3.20)
+
+project(main VERSION 1.0.0 LANGUAGES C CXX)
+
+add_executable(${PROJECT_NAME} main.c)
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib)
+
+target_link_libraries(${PROJECT_NAME} PRIVATE displayer)
+```
+
+Switch to build directory and build
+
+`cd build`
+`cmake ..`
+`make`
+
+
+
+
+
+
+
+
+
+
