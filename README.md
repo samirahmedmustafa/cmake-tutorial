@@ -1,16 +1,6 @@
-![Certified Kubernetes Administrators Course](https://res.cloudinary.com/cloudusthad/image/upload/v1556858993/course-image.png)
+# Cmake tutorials
 
-This repository holds the supporting material for the [Certified Kubernetes Administrators Course](https://kodekloud.com/p/certified-kubernetes-administrator-with-practice-tests). There are two major sections. 
-
-- [Kubernetes The Hard Way on VirtualBox](#kubernetes-the-hard-way-on-virtualbox)
-- [Answers to Practice Tests hosted on KodeKloud](/practice-questions-answers)
-
-
-# Kubernetes The Hard Way On VirtualBox
-
-This tutorial walks you through setting up Kubernetes the hard way on a local machine using VirtualBox.
-This guide is not for people looking for a fully automated command to bring up a Kubernetes cluster.
-If that's you then check out [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine), or the [Getting Started Guides](http://kubernetes.io/docs/getting-started-guides/).
+This tutorial walks you through setting up cmake and using it to create a C/C++ 1 file project from scratch, then moving function into different libarries and header files.
 
 Kubernetes The Hard Way is optimized for learning, which means taking the long route to ensure you understand each task required to bootstrap a Kubernetes cluster.
 
