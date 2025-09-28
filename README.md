@@ -17,7 +17,7 @@ Everyone wants to learn about cmake
 ## Labs
 
 * [Prerequisites](docs/01-prerequisites.md)
-* [First cmake appliction](docs/02-lab1.md)
+* [First cmake application](docs/02-lab1.md)
 * [Adding internal libraries](docs/03-lab2.md)
 * [Adding external libraries](docs/04-lab3.md)
 
