@@ -2,4 +2,4 @@
 * cmake 3.x
 * gcc/g++/glibc
 
-Next: [Add internal library](02-lab1.md)
+Next: [First cmake application](02-lab1.md)
