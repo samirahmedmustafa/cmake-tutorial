@@ -43,5 +43,6 @@ int main()
 }
 ```
 
+find_package looks for a configuration file in the pattern [pkg]Config.cmake (e.g. SDL2Config.cmake) which is in /usr/lib64/cmake/SDL2/ in my system.
 
 Prev: [Add internal library II](03-internal_lib2.md)                                                                                         Next: [Add installation parameters](06-lab5.md)                                                                               
