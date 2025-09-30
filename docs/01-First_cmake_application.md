@@ -75,5 +75,5 @@ Execute the code
 A one file c program
 ```
 
-Previous: [Prerequisites](0-prerequisites.md) Next: [Add internal library](02-internal_lib1.md)
+Previous: [Prerequisites](0-prerequisites.md) Next: [Add internal library I](02-internal_lib1.md)
 
