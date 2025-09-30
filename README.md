@@ -18,7 +18,8 @@ Everyone wants to learn about cmake
 
 * [Prerequisites](docs/0-prerequisites.md)
 * [First cmake application](docs/01-First_cmake_application.md)
-* [Adding internal library](docs/02-internal_lib1.md)
+* [Adding internal library I](docs/02-internal_lib1.md)
+* [Adding internal library II](docs/03-internal_lib2.md)
 * [Adding another internal library](docs/03-internal_lib2.md)
 * [Adding external libraries](docs/04-external_lib.md)
 
