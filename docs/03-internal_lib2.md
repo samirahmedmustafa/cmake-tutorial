@@ -1,4 +1,4 @@
-In order to add extenal library we will need to install the library `-devel` pkg (e.g. `SDL2-devel`), add it with `find_package`, then link it in the CMakeLists.txt
+In order to add external library we will need to install the library `-devel` pkg (e.g. `SDL2-devel`), add it with `find_package`, then link it in the CMakeLists.txt
 
 [ansible@ansible cmake_tutorial]$ `sudo dnf install SDL2-devel -y`
 
@@ -44,4 +44,4 @@ int main()
 ```
 
 
-Prev: [Add internal library](03-lab2.md)                                                                                         Next: [Add another intenal library](05-lab4.md)
+Prev: [Add internal library I](03-internal_lib2.md)                                                                                         Next: [Add external library](04-external_lib.md)
