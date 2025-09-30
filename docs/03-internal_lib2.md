@@ -44,4 +44,4 @@ int main()
 ```
 
 
-Prev: [Add internal library I](03-internal_lib2.md)                                                                                         Next: [Add external library](04-external_lib.md)
+Prev: [Add internal library I](02-internal_lib1.md)                                                                                         Next: [Add external library](04-external_lib.md)
