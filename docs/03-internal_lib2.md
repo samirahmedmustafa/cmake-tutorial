@@ -1,11 +1,54 @@
-In order to add external library we will need to install the library `-devel` pkg (e.g. `SDL2-devel`), add it with `find_package`, then link it in the CMakeLists.txt
+In this lab we will go thru the process of adding a second library call it `blinker`
 
-[ansible@ansible cmake_tutorial]$ `sudo dnf install SDL2-devel -y`
+[ansible@ansible cmake_tutorial]$ `ls`
 
-Update `CMakeLists.txt` to reflect the external library
+`build  CMakeLists.txt  main.c`
+
+Create the libraray source and header directories
+
+[ansible@ansible cmake_tutorial]$ `mkdir -p lib/libblinker/{include,src}`
+
+Create the header file with the header guard
+
+[ansible@ansible cmake_tutorial]$ `vim lib/libblinker/include/display.h`
+```
+#ifndef BLINKER_H
+#define BLINKER_H
+
+void blink(char *c);
+
+#endif
+```
+
+Create the library source code
+
+[ansible@ansible cmake_tutorial]$ `vim lib/libblinker/src/blink.c`
+```
+#include <stdio.h>
+
+void blink(char *c)
+{
+        printf("%s", c);
+}
+```
+
+Create the libraries `CMakeLists.txt` configuration, pointing to the library and the header files(there are more details in the options that chosen with, such as having the library as static or shared, and the scope which could be public or private). The library name/(target name) here is displayer.
+
+[ansible@ansible cmake_tutorial]$ `vim lib/CMakeLists.txt`
+
+```
+add_library(displayer STATIC ${CMAKE_CURRENT_SOURCE_DIR}/libdisplayer/src/display.c)
+add_library(blinker STATIC ${CMAKE_CURRENT_SOURCE_DIR}/libblinker/src/blink.c)
+
+target_include_directories(displayer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/libdisplayer/include)
+target_include_directories(blinker PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/libblinker/include)
+```
+
+Update the main `CMakeLists.txt` to point to the new added library and link header
 
 [ansible@ansible cmake_tutorial]$ `vim CMakeLists.txt`
-```cmake_minimum_required(VERSION 3.20)
+```
+cmake_minimum_required(VERSION 3.20)
 
 project(main VERSION 1.0.0 LANGUAGES C CXX)
 
@@ -13,35 +56,23 @@ add_executable(${PROJECT_NAME} main.c)
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
-find_package(SDL2 REQUIRED)
-if (SDL2_FOUND)
-        target_link_libraries(${PROJECT_NAME} PRIVATE displayer SDL2::SDL2)
-endif()
-
-target_link_libraries(${PROJECT_NAME} PRIVATE displayer)
+target_link_libraries(${PROJECT_NAME} PRIVATE displayer blinker)
 ```
 
-Update `main.c` by adding SDL header and some SDL initialization, such as below
+Switch to build directory and build
 
-[ansible@ansible cmake_tutorial]$ `vim main.c`
-```
-#include <stdio.h>
-#include <display.h>
-#include <SDL.h>
+`cd build`
 
-int main()
-{
-        display("A one file c program\n");
+`cmake ..`
 
-        if(SDL_Init(SDL_INIT_VIDEO) < 0)
-        {
-                printf("SDL could not be initialized!\n"
-                                "SDL_Error: %s\n", SDL_GetError());
-                return 0;
-        }
-        return 0;
-}
-```
+`make`
 
 
-Prev: [Add internal library I](02-internal_lib1.md)                                                                                         Next: [Add external library](04-external_lib.md)
+
+
+Prev: [First cmake application](01-First_cmake_application.md)                                                                                         Next: [Add external library II](03-internal_lib2.md)
+
+
+
+
+
