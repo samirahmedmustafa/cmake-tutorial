@@ -44,4 +44,4 @@ int main()
 ```
 
 
-Prev: [Add internal library II](03-internal_lib2.md)                                                                                         Next: [Add installation parameters](05-Add_install_param.md)                                                                               
+Prev: [Add internal library II](03-internal_lib2.md)                                                                                         Next: [Add installation parameters](06-lab5.md)                                                                               
