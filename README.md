@@ -22,3 +22,7 @@ Everyone wants to learn about cmake
 * [Adding another internal library](docs/03-internal_lib2.md)
 * [Adding external libraries](docs/04-external_lib.md)
 
+Resources:
+
+https://www.youtube.com/watch?v=1HjAYqcJwV8&t=368s
+
