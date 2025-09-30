@@ -25,5 +25,3 @@ Everyone wants to learn about cmake
 Resources:
 
 - https://cmake.org/cmake/help/latest/guide/tutorial/index.html
-- https://www.youtube.com/watch?v=1HjAYqcJwV8&t=368s
-
