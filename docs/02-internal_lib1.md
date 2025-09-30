@@ -68,7 +68,7 @@ Switch to build directory and build
 
 
 
-Prev: [First cmake application](02-lab1.md)                                                                                         Next: [Add external library](04-lab3.md)
+Prev: [First cmake application](01-First_cmake_application.md)                                                                                         Next: [Add external library II](03-internal_lib2.md)
 
 
 
