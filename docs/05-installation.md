@@ -1,6 +1,6 @@
 Now we developed our application and we need to deploy it in a directory according to our company standards. So, I tried to trim as much as possible of the information and code to keep the configuration and the landing to the cmake installation process as soft as possible.
 
-- Below is the project cmake project structure, as I needed to update to have clean installation structure.
+- Below is the project cmake project structure, as I needed to have update in order to have clean installation structure.
 
 `tree make_tutorial/`
 ```
@@ -16,7 +16,7 @@ Now we developed our application and we need to deploy it in a directory accordi
   └── main.c
 ```
 
-- This is the cmake in the root directory
+- This is the cmake in the root directory, which has the **install** instruction inthe last line, this will copy the **main** executable to the **bin** directory
 
 `cat CMakeLists.txt`
 
