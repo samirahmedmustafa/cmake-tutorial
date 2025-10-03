@@ -71,13 +71,13 @@ install(TARGETS displayer)
 install(TARGETS blinker)
 ```
 
-- 
+- Previous we used `cmake ../` from the build directory, now we will extend the usage of cmake (configure, build, install) to be as below
 
-`cmake -S . -B build/`
+`cmake -S . -B build/`                              # to configure
 
-`cmake --build build/ -j12`
+`cmake --build build/ -j12`                         # to build
 
-`cmake --install build --prefix /product/myapp/`
+`cmake --install build --prefix /product/myapp/`    # to install
 
 - The end result of the application structure is as below
 
